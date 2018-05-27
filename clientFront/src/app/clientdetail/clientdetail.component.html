@@ -1,0 +1,31 @@
+<div class="container">
+    <h1> {{ client.Name }}</h1>
+    <table>
+      <tr>
+        <td> Name : </td>
+        <td> {{ client.Name }}</td>
+      </tr>
+      <tr>
+        <td> Phone : </td>
+        <td> {{ client.Phone }}</td>
+      </tr>
+      <tr>
+        <td> Email : </td>
+        <td> {{ client.Email }} </td>
+      </tr>
+      <tr>
+        <td> Company : </td>
+        <td> {{ client.Company}} </td>
+      </tr>
+      <tr>
+        <td> ZipCode:  </td>
+        <td> {{ client.Zip }}</td>
+      </tr>
+    </table>
+  <div class="row">
+      <div class="col-md-12">
+        <button><a [routerLink]="['/ClientEdit',client._id]" class="btn btn-success"> Edit </a> </button>
+        <button class="btn btn-danger" (click)="deleteClientInfo(client._id)"> Delete </button>
+      </div>
+    </div>
+</div>

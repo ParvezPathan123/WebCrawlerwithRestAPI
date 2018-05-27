@@ -1,0 +1,32 @@
+<div class="container">
+    <h1> Add New Client </h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form (ngSubmit)="addNewClientInfo()" #ClientForm = "ngForm">
+          <div class="form-group">
+            <label for="name"> Name </label>
+            <input type="text" class="form-control" [(ngModel)]="client.Name" name="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="name"> Phone </label>
+            <input type="text" class="form-control" [(ngModel)]="client.Phone" name="Phone" required>
+          </div>
+          <div class="form-group">
+            <label for="name"> Email </label>
+            <input type="email" class="form-control" [(ngModel)]="client.Email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="name"> Company </label>
+            <input type="text" class="form-control" [(ngModel)]="client.Company" name="Company" required>
+          </div>
+          <div class="form-group">
+            <label for="name"> ZipCode </label>
+            <input type="text" class="form-control" [(ngModel)]="client.Zip" name="Zip" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!ClientForm.form.valid"> Save </button> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+<h1> All Clients </h1>
+<button>
+<a [routerLink]="['/addClient']" class="btn btn-success"> Add New Client </a> 
+</button>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Phone </th>
+      <th> Email </th>
+      <th> Company </th>
+      <th> Zip Code </th>
+      <th> Details </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td> {{ client.Name }} </td>
+      <td> {{ client.Phone }} </td>
+      <td> {{ client.Email }} </td>
+      <td> {{ client.Company }} </td>
+      <td> {{ client.Zip }} </td>
+      <td>
+          <a [routerLink]="['/ClientDetail/',client._id]"  class="btn btn-success"> Click for Details </a>
+      </td>
+    </tr>
+  </tbody>
